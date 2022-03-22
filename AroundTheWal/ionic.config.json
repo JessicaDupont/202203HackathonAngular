@@ -1,0 +1,7 @@
+{
+  "name": "AroundTheWal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

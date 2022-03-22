@@ -1,0 +1,107 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+// Variables
+$mainBg: #fff;
+$navBg: #A9E5FF;
+$cardCardBg: #73A1FF;
+$navCol: #666;
+$cardTitle: #333;
+
+ion-content {
+    --background: #fff;
+}
+
+ion-tab-bar {
+    background-color: $navBg;
+}
+
+ion-tab-button {
+    background-color: $navBg;
+    color: $navCol;
+}
+
+ion-title {
+    background-color: $navBg;
+    color: $navCol;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    justify-content: center;
+    clear: both;
+}
+
+ion-img {
+    float: inline-start;
+}
+
+ion-card {
+    background-color: $navBg;
+    color: #666;
+}
+
+ion-card-title {
+    // margin-top: 25px;
+    padding: 0 2.5vw;
+    line-height: 2.5rem;
+    color: $cardTitle;
+}
+
+ion-card ion-card {
+    background-color: $cardCardBg;
+}
+
+ion-card ion-card ion-card-subtitle {
+    color: $cardTitle;
+}
+
+ion-button {
+    background-color: $cardCardBg;
+}
+
+ion-buttons {
+    margin: auto;
+}
+
+ion-tab-button {
+    font-size: 1.25rem;
+}
+
+ion-item {
+    color: #000;
+}
+
+// ion-item {
+//     --background: $fff !important;
+// }
+
+
+
+// ion-card ion-img {
+//     height: 200px;
+//     background-size: cover;
+// }

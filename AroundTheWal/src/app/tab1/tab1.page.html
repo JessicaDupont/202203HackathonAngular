@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true" id="page">  
+  <ion-card>
+    <ion-buttons>
+      <ion-tab-button (click)="setDisplay()">
+        <ion-icon name="list-outline"></ion-icon>
+        <ion-label>Liste</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="setDisplay()">
+        <ion-icon name="map-outline"></ion-icon>
+        <ion-label>Carte</ion-label>
+      </ion-tab-button>
+    </ion-buttons>
+    <hr>
+    <ion-card-content *ngIf="display">
+      <ion-card *ngFor="let item of listAttraction">
+        <!-- <ion-img src="{{ item.imageUrl }}"></ion-img> -->
+        <ion-card-title>{{ item.nom }}</ion-card-title><br/>
+        <ion-card-subtitle>{{ item.codePostal }} {{ item.localite }}</ion-card-subtitle>
+      </ion-card>
+    </ion-card-content>
+
+    <ion-card-content *ngIf="!display">
+      <!-- <div class="map-container">
+        <div id="map">
+          <div [innerHTML]="divMap | safeHtml"></div>
+
+        </div>
+
+        <div #map2></div>
+      </div> -->
+      <ion-img [src]="'../assets/map-act.png'"></ion-img>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

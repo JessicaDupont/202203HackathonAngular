@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-card>
+      <ion-buttons>
+        <ion-tab-button (click)='depart()'>
+          Départ
+        </ion-tab-button>
+        <ion-tab-button (click)='arrivee()'>
+          Arrivée
+        </ion-tab-button>
+      </ion-buttons><hr>
+        
+      <ion-card-content *ngIf="test">
+        <ion-card *ngFor="let avion of listAvionDepart">
+          <ion-row>
+            <ion-grid>{{avion[0]}}</ion-grid>
+            <ion-grid>{{avion[1]}}</ion-grid>
+            <ion-grid>{{avion[2]}}</ion-grid>
+            <ion-grid>{{avion[3]}}</ion-grid>
+            <!-- <ion-grid>{{avion[4]}}</ion-grid> -->
+            <ion-grid>{{avion[5]}}</ion-grid>
+          </ion-row>
+        </ion-card>
+      </ion-card-content>
+
+      <!-- <ng-template #conditionFalse> -->
+        <ion-card-content>
+        <ion-card *ngFor="let avion of listAvionArrivee" #conditionFalse>
+          <ion-row>
+            <ion-grid>{{avion[0]}}</ion-grid>
+            <ion-grid>{{avion[1]}}</ion-grid>
+            <ion-grid>{{avion[2]}}</ion-grid>
+            <ion-grid>{{avion[3]}}</ion-grid>
+            <ion-grid>{{avion[4]}}</ion-grid>
+          </ion-row>
+        </ion-card>
+      </ion-card-content>
+    <!-- </ng-template> -->
+  </ion-card>
+</ion-content>

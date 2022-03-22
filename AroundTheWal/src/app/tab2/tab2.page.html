@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true" id="page">
+    <ion-card>
+        <ion-img src="https://www.pairidaiza.eu/sites/default/files/styles/slide_background/public/media/image/ILLUS_WEBSITE_ROYAUME%20MILIEU_1367_20210104_V01B.jpg"></ion-img>
+        <ion-card-title>Pairi Daiza</ion-card-title>
+        <ion-card-content>
+            Venez manger du panda !<br>
+            Panda roti, panda grillé, panda braisé ...<br>
+            Avec sa sauce schishuan inégalable...<br><br>
+            Venez vous régaler !
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-img [src]="'../assets/ryanair.jpg'" ></ion-img>
+        <ion-title>Départs</ion-title>
+        <ion-card *ngFor="let item of departure">
+            <ion-card-title>{{ item[2] }} - {{ item[0] }}</ion-card-title>
+            <ion-card-subtitle>{{ item[1] }}</ion-card-subtitle>
+            <ion-label>Décollage : {{ item[3] }}</ion-label><br>
+            <ion-label>Check-in : {{ item[4] }}</ion-label><br>
+            <ion-label>Terminal : {{ item[5] }}</ion-label><br>
+        </ion-card>
+
+        <ion-title>Arrivées</ion-title>
+        <ion-card *ngFor="let item of arrival">
+            <ion-card-title>{{ item[2] }} - {{ item[0] }}</ion-card-title>
+            <ion-card-subtitle>{{ item[1] }}</ion-card-subtitle>
+            <ion-label>Arrivée : {{ item[3] }}</ion-label><br>
+            <ion-label>Terminal : {{ item[4] }}</ion-label><br>
+        </ion-card>
+    </ion-card>
+    
+  </ion-content>
+  
